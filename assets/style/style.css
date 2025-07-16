@@ -1,0 +1,637 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #f8fafc;
+
+  margin: 0;
+  padding: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* Header Section */
+
+header .jumbotron {
+  position: relative;
+  background-image: url("/assets/image/real-madrid-background.webp");
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  overflow: hidden;
+}
+
+header .jumbotron::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+header .jumbotron h1 {
+  position: relative;
+  z-index: 2;
+  font-size: 3rem;
+  line-height: 1.3;
+  font-weight: bold;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
+  padding: 20px;
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  padding-block: 0.8rem;
+  padding-inline: 1.5rem 5rem;
+}
+
+header nav .logo {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+header nav .line {
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  height: 65%;
+}
+
+header nav .logo img {
+  width: 40px;
+}
+
+header nav .content-list ul {
+  display: flex;
+  gap: 2rem;
+}
+
+header nav .content-list ul li {
+  list-style-type: none;
+}
+
+header nav .content-list ul li a {
+  font-size: 1.15rem;
+  text-decoration: none;
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+header nav .content-list ul li a:hover {
+  color: #4d55cc;
+}
+
+/* End of Header Section */
+
+/* Main Section */
+
+main {
+  display: flex;
+  gap: 1.2rem;
+
+  padding-inline: 1.2rem;
+}
+
+main section {
+  background-color: white;
+  border-radius: 20px;
+}
+
+main .content {
+  width: 75%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+main .content section {
+  padding-inline: 1.5rem;
+  padding-block: 1.5rem 2.5rem;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+main .content header h1 {
+  font-size: 2.5rem;
+  margin-block: 1rem 3rem;
+  text-align: center;
+}
+
+main .content #about-us {
+  padding: 2rem 6rem;
+  text-align: center;
+}
+
+main .content #about-us p {
+  font-size: 1.2rem;
+  line-height: 1.6rem;
+}
+
+main .content #about-us p dfn {
+  font-style: normal;
+}
+
+main .content #player-list .section-content {
+  padding-block: 0.8rem;
+
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+main .content #player-list .section-content .card {
+  display: flex;
+  flex-direction: column;
+
+  flex-basis: 120px;
+  border-radius: 8px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+main .content #player-list .section-content .card img {
+  object-fit: cover;
+  border-top-right-radius: 8px;
+  border-top-left-radius: 8px;
+}
+
+main .content #player-list .section-content .card p {
+  margin: 0;
+  padding-block: 0.3rem;
+  text-align: center;
+  background-color: #3a355d;
+  color: white;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex: 1;
+}
+
+main .content #trophy-list {
+  background-color: white;
+}
+
+main .content #trophy-list .section-content {
+  display: flex;
+  gap: 1.3rem;
+
+  height: 385px;
+}
+
+main .content #trophy-list .section-content .trophy-list {
+  padding-block: 0.8rem;
+
+  display: flex;
+  flex-flow: column wrap;
+  gap: 1.2rem 3rem;
+}
+
+main .content #trophy-list .section-content .trophy-list span {
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+main .content #trophy-list .section-content .trophy-list p {
+  font-size: 0.7rem;
+  font-weight: bold;
+  color: rgba(0, 0, 0, 0.5);
+  margin-block: 0.2rem;
+}
+
+main .content #trophy-list .section-content .trophy-list .progress-bar {
+  border-radius: 20px;
+  border: 2px solid;
+  border-image: linear-gradient(to right, #5d5cfe, #00c2ff) 1;
+}
+
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #best-club-trophy
+  .progress-bar {
+  width: 5%;
+}
+
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #european-cups
+  .progress-bar {
+  width: 33%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #club-world-cups-trophy
+  .progress-bar {
+  width: 25%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #european-super-cups
+  .progress-bar {
+  width: 22%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #uefa-cups
+  .progress-bar {
+  width: 8%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #national-leagues
+  .progress-bar {
+  width: 100%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #spanish-cups
+  .progress-bar {
+  width: 80%;
+}
+main
+  .content
+  #trophy-list
+  .section-content
+  .trophy-list
+  #spanish-super-cups
+  .progress-bar {
+  width: 70%;
+}
+
+main .content #trophy-list .section-content .room-image img {
+  width: 300px;
+  height: 100%;
+  border-radius: 20px;
+}
+
+main .content #trophy-list .section-content .trophy-list .trophy-icon-count {
+  display: flex;
+  align-items: center;
+}
+
+main .content #stadium .section-content {
+  display: flex;
+  align-items: center;
+  gap: 1.3rem;
+}
+
+main .content #stadium .section-content img {
+  width: 500px;
+  border-radius: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+main .content #stadium .section-content h1 {
+  font-size: 2.5rem;
+  text-shadow: 0px 4px 3px rgba(0, 0, 0, 0.4), 0px 8px 13px rgba(0, 0, 0, 0.1),
+    0px 18px 23px rgba(0, 0, 0, 0.1);
+}
+
+main aside {
+  font-family: "Outfit", sans-serif;
+  background-color: white;
+  height: fit-content;
+  padding: 1rem 1.2rem;
+
+  border-radius: 20px;
+  width: 25%;
+}
+
+main aside header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+  margin-bottom: 1.3rem;
+  padding-bottom: 1.3rem;
+}
+
+main aside article header h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0;
+}
+
+main aside article section ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  padding-left: 0;
+}
+main aside article section ul li {
+  list-style-type: none;
+}
+main aside article section ul li span {
+  margin-left: 0.8rem;
+  font-weight: bold;
+  color: #3a355d;
+}
+
+button#backToTop {
+  font-size: 1.1rem;
+  color: white;
+  background-color: #3a355d;
+  width: fit-content;
+  border-radius: 999px;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 100;
+  position: fixed;
+  right: 1.5rem;
+  bottom: 2rem;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+#backToTop.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* End of Main Section */
+
+/* Footer Section */
+
+footer {
+  border-top: 1px solid rgba(0, 0, 0, 0.15);
+  padding-top: 1.5rem;
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+footer #sponsor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+footer #sponsor div {
+  display: flex;
+  gap: 2.3rem;
+}
+
+footer .sponsor_first-column img {
+  width: 90px;
+}
+
+footer img {
+  width: 65px;
+}
+
+footer #social-media {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+footer #social-media .social-media_realmadrid-logo img {
+  width: 40px;
+}
+
+footer #social-media .social-media_list ul {
+  display: flex;
+  gap: 1.8rem;
+  padding-inline: 0;
+}
+
+footer #social-media .social-media_list ul li {
+  list-style-type: none;
+}
+
+footer #social-media .social-media_list ul li a {
+  font-size: 1.3rem;
+  color: #0f2145;
+  transition: all 0.3s ease-in;
+}
+
+footer #social-media .social-media_list ul li a:hover {
+  color: blue;
+}
+
+footer #copy-right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #5e6a83;
+
+  padding-inline: 1rem;
+  padding-bottom: 1rem;
+  font-weight: 500;
+}
+
+footer #copy-right span {
+  font-size: 0.65rem;
+}
+
+footer #copy-right span.copy-right_left-side {
+  font-size: 0.55rem;
+}
+
+footer #copy-right span.copy-right_right-side .first-column {
+  text-decoration: underline;
+}
+
+footer #copy-right span a {
+  text-decoration: none;
+  color: #5e6a83;
+  transition: all 0.3s ease-in-out;
+}
+
+footer #copy-right span a:hover {
+  color: blue;
+}
+/* End of Footer Section */
+
+/* Responsive Design */
+
+@media screen and (max-width: 980px) {
+  main .content #trophy-list .section-content {
+    flex-direction: column;
+  }
+
+  main .content #trophy-list .section-content .trophy-list {
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  main .content #trophy-list .section-content .trophy-list > div {
+    flex-basis: 200px;
+  }
+
+  main .content #trophy-list .section-content .room-image img {
+    width: 100%;
+  }
+
+  main .content #trophy-list .section-content {
+    height: 100%;
+  }
+
+  main .content #stadium .section-content h1 {
+    display: none;
+  }
+
+  main .content #stadium .section-content img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  header nav {
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 0;
+  }
+
+  main {
+    flex-direction: column;
+  }
+
+  main .content {
+    width: 100%;
+  }
+
+  main .content #about-us {
+    padding-inline: 4rem;
+  }
+
+  main aside {
+    width: 100%;
+  }
+
+  footer {
+    gap: 0;
+  }
+
+  footer #social-media {
+    flex-direction: column-reverse;
+  }
+
+  footer #copy-right {
+    flex-direction: column-reverse;
+    gap: 1rem;
+  }
+
+  footer .copy-right_left-side {
+    font-size: 0.7rem !important;
+  }
+
+  footer #copy-right .copy-right_right-side {
+    font-size: 0.8rem;
+  }
+
+  footer #copy-right span.copy-right_right-side .first-column {
+    display: block;
+    text-align: center;
+    margin-bottom: 0.6rem;
+  }
+
+  footer #social-media {
+    border: none;
+  }
+
+  footer #social-media .social-media_realmadrid-logo {
+    border-top: 1px solid rgba(0, 0, 0, 0.15);
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    padding-top: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 555px) {
+  header nav {
+    padding-inline: 0;
+  }
+
+  header nav .content-list ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+  }
+
+  main {
+    padding-inline: 0;
+  }
+
+  main .content #about-us {
+    padding-inline: 1rem;
+  }
+
+  main .content #trophy-list {
+    padding-inline: 0.8rem;
+  }
+
+  main .content #trophy-list .section-content .trophy-list div {
+    flex-basis: 150px;
+  }
+
+  main .content #trophy-list .section-content .trophy-list div br {
+    display: none;
+  }
+
+  footer .sponsor_third-column,
+  footer .sponsor_fourth-column {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  footer #copy-right .copy-right_right-side {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    padding-top: 0.5rem;
+  }
+}
+/* End of Responsive Design */
